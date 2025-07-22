@@ -1,38 +1,33 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db');
- 
+const { DataTypes } = require('sequelize'); // Importa os tipos de dados do Sequelize
+const sequelize = require('../config/db'); // Importa a instância de conexão com o banco
+
+// Define o modelo 'Contact' que representa a tabela 'Contacts' no banco de dados
 const Contact = sequelize.define('Contact', {
    
     id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
+        type: DataTypes.INTEGER,       // Tipo inteiro para o ID
+        autoIncrement: true,           // Incrementa automaticamente (auto incremento)
+        primaryKey: true,              // Define como chave primária da tabela
     },
- 
- 
+
     name: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.STRING,        // Tipo string para nome
+        allowNull: false,              // Campo obrigatório (não pode ser nulo)
     },
- 
+
     email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
+        type: DataTypes.STRING,        // Tipo string para email
+        allowNull: false,              // Campo obrigatório
+        unique: true,                  // Define que o email deve ser único na tabela
     },
+
     message: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+        type: DataTypes.TEXT,          // Campo para texto longo (mensagem)
+        allowNull: false,              // Campo obrigatório
     }
 }, {
- 
- 
-    tableName: 'Contacts',
-    timestamps: true,
+    tableName: 'Contacts',             // Nome explícito da tabela no banco
+    timestamps: true,                  // Cria campos createdAt e updatedAt automaticamente
 });
- 
- 
-module.exports = Contact;
- 
- 
- 
+
+module.exports = Contact;             // Exporta o modelo para ser usado em outras partes da aplicação
