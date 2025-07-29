@@ -1,7 +1,7 @@
 // Importa a biblioteca bcryptjs para fazer a comparação de senhas com hash
 const bcrypt = require('bcryptjs');
 // Importa o modelo User para interagir com a tabela de usuários no banco
-const User = require('../models/users');
+const User = require('../models/Users');
 
 // Função assíncrona para realizar o login do usuário
 exports.login = async (req, res) => {
