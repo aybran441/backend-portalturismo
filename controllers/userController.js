@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs'); // Biblioteca para hash de senhas
-const User = require('../models/Users'); // Modelo User para interação com o banco de dados
+const User = require('../models/users'); // Modelo User para interação com o banco de dados
 
 // Função para criar um novo usuário
 exports.createUser = async (req, res) => {
