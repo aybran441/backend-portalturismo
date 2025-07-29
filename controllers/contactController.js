@@ -1,5 +1,5 @@
 // Importa o modelo Contact para interagir com a tabela de contatos no banco
-const Contact = require('../models/Contact');
+const Contact = require('../models/contact');
 
 // Função para buscar e retornar todos os contatos com campos específicos
 exports.createContact = async (_req, res) => {
