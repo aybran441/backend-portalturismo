@@ -2,7 +2,7 @@ const express = require('express'); // Importa o framework Express
 const router = express.Router();    // Cria uma instância do roteador do Express
 const bcrypt = require('bcryptjs'); // Importa bcrypt para hash de senhas (não usado diretamente aqui)
 const userController = require('../controllers/userController'); // Importa o controller para operações com usuário
-const User = require('../models/Users'); // Importa o modelo User (não usado diretamente aqui)
+
 
 // Rota POST para criar um novo usuário (registro) — rota pública
 router.post('/', userController.createUser);
