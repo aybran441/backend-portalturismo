@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize'); // Importa os tipos de dados do Sequ
 const sequelize = require('../config/db'); // Importa a instância de conexão com o banco
 
 // Define o modelo 'Contact' que representa a tabela 'Contacts' no banco de dados
-const Contact = sequelize.define('Contact', {
+const Contact = sequelize.define('contact', {
    
     id: {
         type: DataTypes.INTEGER,       // Tipo inteiro para o ID
