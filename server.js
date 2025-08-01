@@ -10,7 +10,7 @@ const app = express();
  
 // Permite requisições só do frontend (exemplo localhost:3000)
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'front-end-portalturismo-jjbr.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // métodos permitidos
   credentials: true // se quiser permitir cookies, tokens, etc.
 }));
